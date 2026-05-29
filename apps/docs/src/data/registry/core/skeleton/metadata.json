@@ -1,0 +1,7 @@
+{
+  "name": "Skeleton",
+  "description": "A pulsating loading placeholder that preserves layout structure while content streams in, eliminating layout shift.",
+  "category": "Core Components",
+  "installation": "npx nativecn add skeleton",
+  "usageCode": "import { Skeleton } from \"@nativecn/ui/components/skeleton\";\n\nexport default function App() {\n  return (\n    <View style={{ gap: 12, padding: 16 }}>\n      <Skeleton style={{ width: \"100%\", height: 20 }} />\n      <Skeleton style={{ width: \"75%\", height: 20 }} />\n      <Skeleton style={{ width: \"50%\", height: 20 }} />\n    </View>\n  );\n}"
+}

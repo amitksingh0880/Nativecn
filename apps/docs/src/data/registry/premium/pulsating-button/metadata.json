@@ -1,0 +1,7 @@
+{
+  "name": "Pulsating Button",
+  "description": "A glowing CTA button with a radiating pulse ring animation that continuously draws the user's eye to take action.",
+  "category": "Premium - Motion",
+  "installation": "npx nativecn add pulsating-button",
+  "usageCode": "import { PulsatingButton } from \"@nativecn/ui/premium/motion/pulsating-button\";\n\nexport default function App() {\n  return (\n    <PulsatingButton\n      label=\"Live Now\"\n      pulseColor=\"rgba(168, 85, 247, 0.4)\"\n      onPress={() => console.log(\"Pulsed!\")}\n    />\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Swipe Row",
+  "description": "A horizontally swipeable list row exposing configurable left/right action buttons with smooth spring gesture physics.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add swipe-row",
+  "usageCode": "import { SwipeRow } from \"@nativecn/ui/premium/mobile/swipe-row\";\nimport { Trash2, Archive } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <SwipeRow\n      leftActions={[{ icon: Archive, label: \"Archive\", color: \"#3b82f6\", onPress: () => {} }]}\n      rightActions={[{ icon: Trash2, label: \"Delete\", color: \"#ef4444\", onPress: () => {} }]}\n    >\n      <Text>Swipe me left or right</Text>\n    </SwipeRow>\n  );\n}"
+}

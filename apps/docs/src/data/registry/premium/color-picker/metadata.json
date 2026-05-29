@@ -1,0 +1,7 @@
+{
+  "name": "Color Picker",
+  "description": "A full-spectrum HSV color selection wheel with saturation/lightness gradient picker and hex code display.",
+  "category": "Premium - Inputs",
+  "installation": "npx nativecn add color-picker",
+  "usageCode": "import { useState } from \"react\";\nimport { ColorPicker } from \"@nativecn/ui/premium/inputs/color-picker\";\n\nexport default function App() {\n  const [color, setColor] = useState(\"#a855f7\");\n  return (\n    <ColorPicker\n      value={color}\n      onChange={setColor}\n    />\n  );\n}"
+}

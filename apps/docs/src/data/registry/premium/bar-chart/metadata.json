@@ -1,0 +1,7 @@
+{
+  "name": "Bar Chart",
+  "description": "A pure SVG animated bar chart with smooth entrance transitions, color-coded bars, value labels, and configurable axes.",
+  "category": "Premium - Charts",
+  "installation": "npx nativecn add bar-chart",
+  "usageCode": "import { BarChart } from \"@nativecn/ui/premium/charts/bar-chart\";\n\nexport default function App() {\n  const data = [\n    { label: \"Mon\", value: 40 },\n    { label: \"Tue\", value: 75 },\n    { label: \"Wed\", value: 55 },\n    { label: \"Thu\", value: 90 },\n    { label: \"Fri\", value: 62 },\n  ];\n  return <BarChart data={data} height={200} barColor=\"#a855f7\" />;\n}"
+}

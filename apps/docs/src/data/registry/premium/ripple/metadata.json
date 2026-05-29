@@ -1,0 +1,7 @@
+{
+  "name": "Ripple",
+  "description": "A concentric animated pulse effect that radiates outward from a center point, ideal for radar pings and attention-drawing callouts.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add ripple",
+  "usageCode": "import { Ripple } from \"@nativecn/ui/premium/magic/ripple\";\n\nexport default function App() {\n  return (\n    <View style={{ flex: 1, alignItems: \"center\", justifyContent: \"center\" }}>\n      <Ripple\n        color=\"rgba(168, 85, 247, 0.2)\"\n        numRipples={4}\n        style={{ width: 200, height: 200 }}\n      />\n    </View>\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Alert Dialog",
+  "description": "A blocking confirmation overlay with smooth entrance animation, designed to interrupt and require deliberate user action before proceeding.",
+  "category": "Core Components",
+  "installation": "npx nativecn add alert-dialog",
+  "usageCode": "import { useState } from \"react\";\nimport { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from \"@nativecn/ui/components/alert-dialog\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [open, setOpen] = useState(false);\n  return (\n    <View>\n      <Button onPress={() => setOpen(true)}>Delete Account</Button>\n      <AlertDialog open={open} onOpenChange={setOpen}>\n        <AlertDialogContent>\n          <AlertDialogHeader>\n            <AlertDialogTitle>Are you absolutely sure?</AlertDialogTitle>\n            <AlertDialogDescription>This action cannot be undone.</AlertDialogDescription>\n          </AlertDialogHeader>\n          <AlertDialogFooter>\n            <AlertDialogCancel onPress={() => setOpen(false)}>Cancel</AlertDialogCancel>\n            <AlertDialogAction onPress={() => setOpen(false)}>Continue</AlertDialogAction>\n          </AlertDialogFooter>\n        </AlertDialogContent>\n      </AlertDialog>\n    </View>\n  );\n}"
+}

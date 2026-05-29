@@ -1,0 +1,7 @@
+{
+  "name": "Tooltip",
+  "description": "A lightweight contextual popup that surfaces helper text above any trigger element with smooth zoom entrance animations.",
+  "category": "Core Components",
+  "installation": "npx nativecn add tooltip",
+  "usageCode": "import { Tooltip, TooltipTrigger, TooltipContent, TooltipProvider } from \"@nativecn/ui/components/tooltip\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  return (\n    <TooltipProvider>\n      <Tooltip>\n        <TooltipTrigger>\n          <Button variant=\"outline\">Hover me</Button>\n        </TooltipTrigger>\n        <TooltipContent>\n          Add to your saved items\n        </TooltipContent>\n      </Tooltip>\n    </TooltipProvider>\n  );\n}"
+}

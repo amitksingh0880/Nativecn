@@ -1,0 +1,7 @@
+{
+  "name": "Typing Text",
+  "description": "A character-by-character typewriter text animation with configurable speed, cursor blink, and optional loop or delete phases.",
+  "category": "Premium - Motion",
+  "installation": "npx nativecn add typing-text",
+  "usageCode": "import { TypingText } from \"@nativecn/ui/premium/motion/typing-text\";\n\nexport default function App() {\n  return (\n    <TypingText\n      text=\"Building the future of mobile UI...\"\n      speed={60}\n      style={{ fontSize: 18, color: \"#a855f7\" }}\n    />\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Breadcrumb",
+  "description": "A hierarchical navigation trail with chevron separators and truncation support for deep navigation paths.",
+  "category": "Core Components",
+  "installation": "npx nativecn add breadcrumb",
+  "usageCode": "import { Breadcrumb, BreadcrumbList, BreadcrumbItem, BreadcrumbLink, BreadcrumbSeparator, BreadcrumbPage } from \"@nativecn/ui/components/breadcrumb\";\n\nexport default function App() {\n  return (\n    <Breadcrumb>\n      <BreadcrumbList>\n        <BreadcrumbItem><BreadcrumbLink href=\"/\">Home</BreadcrumbLink></BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem><BreadcrumbLink href=\"/settings\">Settings</BreadcrumbLink></BreadcrumbItem>\n        <BreadcrumbSeparator />\n        <BreadcrumbItem><BreadcrumbPage>Profile</BreadcrumbPage></BreadcrumbItem>\n      </BreadcrumbList>\n    </Breadcrumb>\n  );\n}"
+}

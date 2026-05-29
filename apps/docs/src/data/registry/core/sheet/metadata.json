@@ -1,0 +1,7 @@
+{
+  "name": "Sheet",
+  "description": "A gesture-driven bottom drawer panel that slides up from the screen edge with spring physics and safe-area padding.",
+  "category": "Core Components",
+  "installation": "npx nativecn add sheet",
+  "usageCode": "import { useState } from \"react\";\nimport { Sheet, SheetContent, SheetHeader, SheetTitle, SheetDescription } from \"@nativecn/ui/components/sheet\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [open, setOpen] = useState(false);\n  return (\n    <View>\n      <Button onPress={() => setOpen(true)}>Open Sheet</Button>\n      <Sheet open={open} onOpenChange={setOpen}>\n        <SheetContent>\n          <SheetHeader>\n            <SheetTitle>Edit Profile</SheetTitle>\n            <SheetDescription>Make changes to your profile here.</SheetDescription>\n          </SheetHeader>\n        </SheetContent>\n      </Sheet>\n    </View>\n  );\n}"
+}

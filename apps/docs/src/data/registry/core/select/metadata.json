@@ -1,0 +1,7 @@
+{
+  "name": "Select",
+  "description": "A native-feeling dropdown picker with smooth slide-up sheet, item highlighting, and an accessible trigger button.",
+  "category": "Core Components",
+  "installation": "npx nativecn add select",
+  "usageCode": "import { Select, SelectTrigger, SelectValue, SelectContent, SelectItem } from \"@nativecn/ui/components/select\";\n\nexport default function App() {\n  return (\n    <Select>\n      <SelectTrigger>\n        <SelectValue placeholder=\"Select a theme\" />\n      </SelectTrigger>\n      <SelectContent>\n        <SelectItem value=\"dark\">Dark</SelectItem>\n        <SelectItem value=\"light\">Light</SelectItem>\n        <SelectItem value=\"system\">System</SelectItem>\n      </SelectContent>\n    </Select>\n  );\n}"
+}

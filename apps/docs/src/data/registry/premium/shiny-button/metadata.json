@@ -1,0 +1,7 @@
+{
+  "name": "Shiny Button",
+  "description": "A premium CTA button with a perpetually sweeping light-gloss highlight that draws user attention with subtle animated brilliance.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add shiny-button",
+  "usageCode": "import { ShinyButton } from \"@nativecn/ui/premium/magic/shiny-button\";\n\nexport default function App() {\n  return (\n    <ShinyButton\n      label=\"Get Started Free\"\n      onPress={() => console.log(\"Shiny press!\")}\n    />\n  );\n}"
+}

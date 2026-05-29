@@ -1,0 +1,9 @@
+appId: com.nativecn.example
+---
+- launchApp:
+    clearState: true
+- tapOn:
+    id: "email-input"
+- inputText: "test@nativecn.ui"
+- hideKeyboard
+- assertVisible: "test@nativecn.ui"

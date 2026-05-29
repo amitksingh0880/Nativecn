@@ -1,0 +1,7 @@
+appId: com.nativecn.example
+---
+- launchApp:
+    clearState: true
+- assertVisible: "Button"
+- tapOn: "Button"
+- assertVisible: "Clicked!"

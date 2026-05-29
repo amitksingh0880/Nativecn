@@ -1,0 +1,87 @@
+{
+  "name": "@nativecn/ui",
+  "version": "1.0.0",
+  "description": "A shadcn/ui + Radix-inspired React Native component library that surpasses both",
+  "keywords": [
+    "react-native",
+    "expo",
+    "ui",
+    "components",
+    "shadcn",
+    "nativecn"
+  ],
+  "license": "MIT",
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./tokens": "./src/tokens/index.ts",
+    "./lib": "./src/lib/index.ts",
+    "./hooks": "./src/hooks/index.ts",
+    "./components/*": "./src/components/*/index.ts",
+    "./premium/*": "./src/premium/*/index.ts"
+  },
+  "scripts": {
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint src --ext .ts,.tsx",
+    "test": "jest",
+    "test:coverage": "jest --coverage",
+    "test:watch": "jest --watch",
+    "clean": "rimraf dist coverage"
+  },
+  "peerDependencies": {
+    "expo": ">=52.0.0",
+    "nativewind": ">=5.0.0",
+    "react": ">=18.0.0",
+    "react-native": ">=0.76.0",
+    "react-native-gesture-handler": ">=2.0.0",
+    "react-native-reanimated": ">=3.0.0",
+    "react-native-safe-area-context": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "expo": {
+      "optional": true
+    },
+    "react-native-gesture-handler": {
+      "optional": false
+    }
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "lucide-react-native": "^0.469.0",
+    "moti": "^0.29.0",
+    "tailwind-merge": "^2.6.0"
+  },
+  "devDependencies": {
+    "@react-native/jest-preset": "^0.85.3",
+    "@testing-library/jest-native": "^5.4.3",
+    "@testing-library/react-native": "^13.2.0",
+    "@testing-library/user-event": "^14.5.2",
+    "@types/jest": "^30.0.0",
+    "@types/react": "^18.3.18",
+    "@types/react-native": "^0.73.0",
+    "babel-jest": "^29.7.0",
+    "babel-preset-expo": "^56.0.14",
+    "expo-blur": "^56.0.3",
+    "expo-haptics": "^56.0.3",
+    "expo-linear-gradient": "^56.0.4",
+    "expo-local-authentication": "^56.0.4",
+    "jest": "^29.7.0",
+    "jest-expo": "^52.0.0",
+    "jest-html-reporters": "^3.1.7",
+    "memfs": "^4.14.1",
+    "nativewind": "^4.2.4",
+    "react": "^19.2.6",
+    "react-native": "^0.85.3",
+    "react-native-gesture-handler": "^3.0.0",
+    "react-native-reanimated": "^4.4.0",
+    "react-native-safe-area-context": "^5.8.0",
+    "react-native-svg": "^15.15.5",
+    "react-test-renderer": "^19.2.6",
+    "rimraf": "^6.0.1",
+    "tsd": "^0.31.2",
+    "typescript": "^5.7.3"
+  }
+}

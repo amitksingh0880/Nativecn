@@ -1,0 +1,7 @@
+{
+  "name": "Progress Ring",
+  "description": "An animated, vector-based SVG progress indicator supporting smooth dashboard status transitions, double arcs, and central statistics representation.",
+  "category": "Premium - Charts",
+  "installation": "npx nativecn add progress-ring",
+  "usageCode": "import { ProgressRing } from \"@nativecn/ui/premium/charts/progress-ring\";\n\nexport default function App() {\n  return (\n    <ProgressRing \n      size={140} \n      strokeWidth={12} \n      percentage={72} \n      primaryColor=\"#a855f7\" \n      secondaryColor=\"#1e1b4b\"\n    />\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Toast",
+  "description": "A beautiful notification banner that drops smoothly from the top of the display with premium sliding feedback.",
+  "category": "Core Components",
+  "installation": "npx nativecn add toast",
+  "usageCode": "import { useToast } from \"@nativecn/ui/hooks/use-toast\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const { toast } = useToast();\n  \n  return (\n    <Button \n      onPress={() => toast({ \n        title: \"Preferences Saved\", \n        description: \"Security credentials updated.\",\n        variant: \"default\" \n      })}\n    >\n      Show Alert\n    </Button>\n  );\n}"
+}

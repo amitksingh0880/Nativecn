@@ -1,0 +1,7 @@
+{
+  "name": "Confetti",
+  "description": "A highly-aesthetic, physics-simulated celebration effect that bursts particles across the display with customizable velocity and friction.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add confetti",
+  "usageCode": "import { Confetti } from \"@nativecn/ui/premium/magic/confetti\";\nimport { useRef } from \"react\";\n\nexport default function App() {\n  const confettiRef = useRef(null);\n  \n  return (\n    <View>\n      <Button onPress={() => confettiRef.current?.burst()}>\n        Celebrate\n      </Button>\n      <Confetti ref={confettiRef} count={100} />\n    </View>\n  );\n}"
+}

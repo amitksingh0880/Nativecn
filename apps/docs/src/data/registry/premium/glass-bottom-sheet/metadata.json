@@ -1,0 +1,7 @@
+{
+  "name": "Glass Bottom Sheet",
+  "description": "A breathtaking glassmorphic drawer that slides up smoothly from the bottom with rich vector blurs and touch grab indicators.",
+  "category": "Premium - Glass",
+  "installation": "npx nativecn add glass-bottom-sheet",
+  "usageCode": "import { GlassBottomSheet } from \"@nativecn/ui/premium/glass/glass-bottom-sheet\";\n\nexport default function App() {\n  return (\n    <GlassBottomSheet isOpen={true} intensity=\"high\">\n      <Text style={{ color: \"#fff\", fontWeight: \"bold\" }}>Glass Premium Sheet</Text>\n      <Text style={{ color: \"#94a3b8\" }}> Frosted glass panel layout </Text>\n    </GlassBottomSheet>\n  );\n}"
+}

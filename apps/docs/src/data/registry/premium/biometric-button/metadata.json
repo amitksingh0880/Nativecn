@@ -1,0 +1,7 @@
+{
+  "name": "Biometric Button",
+  "description": "A highly-aesthetic authentication button that integrates with FaceID/Fingerprint local authentication and displays glowing, premium micro-animations.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add biometric-button",
+  "usageCode": "import { BiometricButton } from \"@nativecn/ui/premium/mobile/biometric-button\";\n\nexport default function App() {\n  const handleAuthSuccess = () => {\n    console.log(\"Successfully Authenticated!\");\n  };\n\n  return (\n    <BiometricButton \n      title=\"Unlock Vault\"\n      onSuccess={handleAuthSuccess}\n      onFailure={(error) => console.log(error)}\n    />\n  );\n}"
+}

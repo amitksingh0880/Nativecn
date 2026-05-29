@@ -1,0 +1,7 @@
+{
+  "name": "Tabs",
+  "description": "A clean segmented control that allows swapping between layered views with subtle horizontal slides.",
+  "category": "Core Components",
+  "installation": "npx nativecn add tabs",
+  "usageCode": "import { Tabs, TabsList, TabsTrigger, TabsContent } from \"@nativecn/ui/components/tabs\";\n\nexport default function App() {\n  return (\n    <Tabs defaultValue=\"inbox\">\n      <TabsList>\n        <TabsTrigger value=\"inbox\">Inbox</TabsTrigger>\n        <TabsTrigger value=\"archive\">Archive</TabsTrigger>\n      </TabsList>\n      <TabsContent value=\"inbox\">\n        <Text>You have 3 unread messages.</Text>\n      </TabsContent>\n      <TabsContent value=\"archive\">\n        <Text>No archived conversations.</Text>\n      </TabsContent>\n    </Tabs>\n  );\n}"
+}

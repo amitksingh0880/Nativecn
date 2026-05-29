@@ -1,0 +1,7 @@
+{
+  "name": "OTP Input",
+  "description": "An elegant, multi-box One-Time Password component featuring glowing focus borders, a simulated active cursor, and soft slide-in character animations.",
+  "category": "Premium - Inputs",
+  "installation": "npx nativecn add otp-input",
+  "usageCode": "import { OtpInput } from \"@nativecn/ui/premium/inputs/otp-input\";\n\nexport default function App() {\n  const handleComplete = (code: string) => {\n    console.log(\"Entered OTP:\", code);\n  };\n\n  return (\n    <OtpInput \n      length={4} \n      onComplete={handleComplete} \n    />\n  );\n}"
+}

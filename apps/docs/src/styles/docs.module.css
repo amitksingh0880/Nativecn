@@ -1,0 +1,230 @@
+.layout {
+  display: flex;
+  min-height: 100vh;
+  padding-top: var(--header-height);
+}
+
+.sidebarWrapper {
+  width: var(--sidebar-width);
+  height: calc(100vh - var(--header-height));
+  position: fixed;
+  top: var(--header-height);
+  left: 0;
+  border-right: 1px solid var(--border);
+  background: var(--background);
+  overflow-y: auto;
+  z-index: 10;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .sidebarWrapper {
+    transform: translateX(-100%);
+  }
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+}
+
+.contentWrapper {
+  flex: 1;
+  margin-left: var(--sidebar-width);
+  padding: 48px 64px 80px;
+  max-width: 1200px;
+  transition: margin-left 0.3s ease;
+}
+
+@media (max-width: 1024px) {
+  .contentWrapper {
+    margin-left: 0;
+    padding: 32px 24px 80px;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--header-height);
+  border-bottom: 1px solid var(--border);
+  background: rgba(3, 3, 3, 0.7);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 20px;
+  }
+}
+
+.logoArea {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.logoIcon {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.navLinks {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+@media (max-width: 640px) {
+  .navLinks {
+    display: none;
+  }
+}
+
+.navLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+}
+
+.navLink:hover {
+  color: #ffffff;
+}
+
+.sidebar {
+  padding: 32px 24px;
+}
+
+.sidebarGroup {
+  margin-bottom: 28px;
+}
+
+.sidebarGroupTitle {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted-foreground);
+  margin-bottom: 12px;
+}
+
+.sidebarLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebarLink {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  padding: 6px 12px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.sidebarLink:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.sidebarLinkActive {
+  color: var(--primary);
+  background: rgba(168, 85, 247, 0.08);
+  font-weight: 600;
+}
+
+.badge {
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 6px;
+  border-radius: 9999px;
+  background: rgba(168, 85, 247, 0.15);
+  color: var(--primary);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+}
+
+/* Detail page styles */
+.docHeader {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 12px;
+  letter-spacing: -0.03em;
+}
+
+.description {
+  font-size: 18px;
+  color: var(--muted-foreground);
+  line-height: 1.6;
+}
+
+.section {
+  margin-top: 48px;
+  margin-bottom: 24px;
+}
+
+.sectionTitle {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 8px;
+}
+
+.paragraph {
+  color: var(--muted-foreground);
+  line-height: 1.7;
+  margin-bottom: 20px;
+}
+
+.codeBlockHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+  background: #0d0d11;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 12px;
+  font-family: var(--font-mono);
+  color: var(--muted-foreground);
+}
+
+.copyBtn {
+  background: transparent;
+  border: none;
+  color: var(--muted-foreground);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.copyBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.05);
+}

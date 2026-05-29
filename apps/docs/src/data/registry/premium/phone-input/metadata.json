@@ -1,0 +1,7 @@
+{
+  "name": "Phone Input",
+  "description": "An international phone number input with country flag picker, dial-code prefix, and real-time formatting as you type.",
+  "category": "Premium - Inputs",
+  "installation": "npx nativecn add phone-input",
+  "usageCode": "import { useState } from \"react\";\nimport { PhoneInput } from \"@nativecn/ui/premium/inputs/phone-input\";\n\nexport default function App() {\n  const [phone, setPhone] = useState(\"\");\n  return (\n    <PhoneInput\n      value={phone}\n      onChangeText={setPhone}\n      defaultCountry=\"US\"\n      label=\"Phone Number\"\n    />\n  );\n}"
+}

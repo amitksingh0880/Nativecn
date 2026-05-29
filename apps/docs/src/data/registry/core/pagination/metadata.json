@@ -1,0 +1,7 @@
+{
+  "name": "Pagination",
+  "description": "A clean, accessible page navigation bar with previous/next controls, numbered links, and ellipsis overflow for large datasets.",
+  "category": "Core Components",
+  "installation": "npx nativecn add pagination",
+  "usageCode": "import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationPrevious, PaginationNext, PaginationEllipsis } from \"@nativecn/ui/components/pagination\";\n\nexport default function App() {\n  return (\n    <Pagination>\n      <PaginationContent>\n        <PaginationItem><PaginationPrevious /></PaginationItem>\n        <PaginationItem><PaginationLink isActive>1</PaginationLink></PaginationItem>\n        <PaginationItem><PaginationLink>2</PaginationLink></PaginationItem>\n        <PaginationItem><PaginationEllipsis /></PaginationItem>\n        <PaginationItem><PaginationNext /></PaginationItem>\n      </PaginationContent>\n    </Pagination>\n  );\n}"
+}

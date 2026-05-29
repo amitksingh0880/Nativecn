@@ -1,0 +1,7 @@
+{
+  "name": "AI Chat Bubble",
+  "description": "A rich chat conversational bubble set showcasing premium typing indicators, message delivery micro-states, and soft glass-morphic text panels.",
+  "category": "Premium - AI",
+  "installation": "npx nativecn add chat-bubble",
+  "usageCode": "import { ChatBubble } from \"@nativecn/ui/premium/ai/chat-bubble\";\nimport { TypingIndicator } from \"@nativecn/ui/premium/ai/typing-indicator\";\n\nexport default function App() {\n  return (\n    <View style={{ gap: 12 }}>\n      <ChatBubble sender=\"user\" text=\"Design a dark landing page.\" />\n      <ChatBubble sender=\"ai\">\n        <TypingIndicator />\n      </ChatBubble>\n    </View>\n  );\n}"
+}

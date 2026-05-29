@@ -1,0 +1,7 @@
+{
+  "name": "Currency Input",
+  "description": "A locale-aware monetary input with automatic thousands separator formatting, currency symbol prefix, and validation states.",
+  "category": "Premium - Inputs",
+  "installation": "npx nativecn add currency-input",
+  "usageCode": "import { useState } from \"react\";\nimport { CurrencyInput } from \"@nativecn/ui/premium/inputs/currency-input\";\n\nexport default function App() {\n  const [amount, setAmount] = useState(0);\n  return (\n    <CurrencyInput\n      value={amount}\n      onChangeValue={setAmount}\n      currency=\"USD\"\n      label=\"Amount\"\n    />\n  );\n}"
+}

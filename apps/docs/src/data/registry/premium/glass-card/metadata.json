@@ -1,0 +1,7 @@
+{
+  "name": "Glass Card",
+  "description": "A state-of-the-art glassmorphic container using backdrop-filters, subtle gradients, and custom radial ambient lights.",
+  "category": "Premium - Glass",
+  "installation": "npx nativecn add glass-card",
+  "usageCode": "import { GlassCard } from \"@nativecn/ui/premium/glass/glass-card\";\n\nexport default function App() {\n  return (\n    <GlassCard intensity=\"medium\" glowColor=\"rgba(168, 85, 247, 0.15)\">\n      <Text style={{ color: \"#fff\", fontWeight: \"bold\" }}>Glass Premium Panel</Text>\n      <Text style={{ color: \"#94a3b8\" }}>Translucent frosted overlay</Text>\n    </GlassCard>\n  );\n}"
+}

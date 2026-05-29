@@ -1,0 +1,7 @@
+{
+  "name": "Glass Panel",
+  "description": "A minimal frosted-glass surface for layering content over vibrant backgrounds with configurable blur and opacity.",
+  "category": "Premium - Glass",
+  "installation": "npx nativecn add glass-panel",
+  "usageCode": "import { GlassPanel } from \"@nativecn/ui/premium/glass/glass-panel\";\n\nexport default function App() {\n  return (\n    <View style={{ flex: 1, backgroundColor: \"#6d28d9\" }}>\n      <GlassPanel style={{ margin: 24, padding: 20 }}>\n        <Text style={{ color: \"white\" }}>Glass Panel Content</Text>\n      </GlassPanel>\n    </View>\n  );\n}"
+}

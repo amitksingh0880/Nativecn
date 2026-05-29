@@ -1,0 +1,7 @@
+{
+  "name": "Badge",
+  "description": "A stylized miniature pill badge with vibrant colors, outline and glass variants to denote status and metrics.",
+  "category": "Core Components",
+  "installation": "npx nativecn add badge",
+  "usageCode": "import { Badge } from \"@nativecn/ui/components/badge\";\n\nexport default function App() {\n  return (\n    <View style={{ flexDirection: \"row\", gap: 8 }}>\n      <Badge variant=\"default\">New</Badge>\n      <Badge variant=\"success\">Completed</Badge>\n      <Badge variant=\"glass\">Glass</Badge>\n    </View>\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Animated Number",
+  "description": "A sleek, responsive digital ticker that rolls through numeric updates with dynamic acceleration.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add animated-number",
+  "usageCode": "import { AnimatedNumber } from \"@nativecn/ui/premium/magic/animated-number\";\n\nexport default function App() {\n  return (\n    <AnimatedNumber \n      value={8240} \n      duration={1500} \n      style={{ fontSize: 32, fontWeight: \"bold\", color: \"#a855f7\" }}\n    />\n  );\n}"
+}

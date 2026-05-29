@@ -1,0 +1,7 @@
+{
+  "name": "Toggle Group",
+  "description": "A set of mutually exclusive or multi-select toggle buttons styled as a cohesive segmented control with spring animations.",
+  "category": "Core Components",
+  "installation": "npx nativecn add toggle-group",
+  "usageCode": "import { useState } from \"react\";\nimport { ToggleGroup, ToggleGroupItem } from \"@nativecn/ui/components/toggle-group\";\nimport { AlignLeft, AlignCenter, AlignRight } from \"lucide-react-native\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"left\");\n  return (\n    <ToggleGroup type=\"single\" value={value} onValueChange={setValue}>\n      <ToggleGroupItem value=\"left\" aria-label=\"Left align\">\n        <AlignLeft size={16} />\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"center\" aria-label=\"Center align\">\n        <AlignCenter size={16} />\n      </ToggleGroupItem>\n      <ToggleGroupItem value=\"right\" aria-label=\"Right align\">\n        <AlignRight size={16} />\n      </ToggleGroupItem>\n    </ToggleGroup>\n  );\n}"
+}

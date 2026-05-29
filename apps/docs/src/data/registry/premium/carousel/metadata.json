@@ -1,0 +1,7 @@
+{
+  "name": "Carousel",
+  "description": "A touch-gesture horizontal scrolling carousel with snap-to-item physics, active dot indicators, and looping support.",
+  "category": "Premium - Layout",
+  "installation": "npx nativecn add carousel",
+  "usageCode": "import { Carousel, CarouselItem } from \"@nativecn/ui/premium/layout/carousel\";\n\nexport default function App() {\n  const items = [\"Slide One\", \"Slide Two\", \"Slide Three\"];\n  return (\n    <Carousel>\n      {items.map((item, i) => (\n        <CarouselItem key={i}>\n          <Text>{item}</Text>\n        </CarouselItem>\n      ))}\n    </Carousel>\n  );\n}"
+}

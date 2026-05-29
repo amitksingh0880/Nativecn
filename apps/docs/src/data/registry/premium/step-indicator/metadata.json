@@ -1,0 +1,7 @@
+{
+  "name": "Step Indicator",
+  "description": "A horizontal multi-step onboarding progress tracker with animated connector lines and active step highlight transitions.",
+  "category": "Premium - Onboarding",
+  "installation": "npx nativecn add step-indicator",
+  "usageCode": "import { StepIndicator } from \"@nativecn/ui/premium/onboarding/step-indicator\";\n\nexport default function App() {\n  return (\n    <StepIndicator\n      steps={[\"Account\", \"Profile\", \"Preferences\", \"Done\"]}\n      currentStep={2}\n    />\n  );\n}"
+}

@@ -21,6 +21,8 @@
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "registry:generate": "npm --prefix apps/docs run registry:generate",
+    "registry:watch": "npm --prefix apps/docs run registry:generate -- --watch",
     "test": "turbo run test",
     "test:coverage": "turbo run test -- --coverage",
     "lint": "biome lint .",

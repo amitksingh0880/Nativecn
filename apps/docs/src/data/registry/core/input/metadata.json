@@ -1,0 +1,7 @@
+{
+  "name": "Input",
+  "description": "An elegant form input field with floating placeholder support and active focus glowing borders.",
+  "category": "Core Components",
+  "installation": "npx nativecn add input",
+  "usageCode": "import { useState } from \"react\";\nimport { Input } from \"@nativecn/ui/components/input\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"\");\n  return (\n    <Input \n      value={value}\n      onChangeText={setValue}\n      placeholder=\"Enter account username\"\n      label=\"Username\"\n    />\n  );\n}"
+}

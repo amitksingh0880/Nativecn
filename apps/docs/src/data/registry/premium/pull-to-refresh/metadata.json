@@ -1,0 +1,7 @@
+{
+  "name": "Pull to Refresh",
+  "description": "A native pull-to-refresh gesture wrapper with custom animated spinner and smooth release threshold feedback.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add pull-to-refresh",
+  "usageCode": "import { PullToRefresh } from \"@nativecn/ui/premium/mobile/pull-to-refresh\";\nimport { ScrollView } from \"react-native\";\n\nexport default function App() {\n  const handleRefresh = async () => {\n    await new Promise(resolve => setTimeout(resolve, 1500));\n  };\n  return (\n    <PullToRefresh onRefresh={handleRefresh}>\n      <ScrollView>\n        <Text>Pull down to refresh this list.</Text>\n      </ScrollView>\n    </PullToRefresh>\n  );\n}"
+}

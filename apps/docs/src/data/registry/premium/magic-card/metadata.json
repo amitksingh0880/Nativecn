@@ -1,0 +1,7 @@
+{
+  "name": "Magic Card",
+  "description": "A premium container with a continuously rotating conic gradient border powered by Reanimated, creating a living holographic frame.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add magic-card",
+  "usageCode": "import { MagicCard } from \"@nativecn/ui/premium/magic/magic-card\";\n\nexport default function App() {\n  return (\n    <MagicCard style={{ width: 280 }}>\n      <Text variant=\"h4\">Magic UI</Text>\n      <Text variant=\"muted\">Animated rotating border effect.</Text>\n    </MagicCard>\n  );\n}"
+}

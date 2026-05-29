@@ -1,0 +1,7 @@
+{
+  "name": "Blur Fade",
+  "description": "An entrance animation that simultaneously fades and unblurs content as it slides into view, creating a premium reveal feel.",
+  "category": "Premium - Motion",
+  "installation": "npx nativecn add blur-fade",
+  "usageCode": "import { BlurFade } from \"@nativecn/ui/premium/motion/blur-fade\";\n\nexport default function App() {\n  return (\n    <BlurFade delay={0} duration={600}>\n      <Text variant=\"h2\">Hello, World!</Text>\n    </BlurFade>\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Collapsible",
+  "description": "A smooth expand/collapse container driven by spring physics, allowing any content to be progressively revealed.",
+  "category": "Core Components",
+  "installation": "npx nativecn add collapsible",
+  "usageCode": "import { useState } from \"react\";\nimport { Collapsible, CollapsibleTrigger, CollapsibleContent } from \"@nativecn/ui/components/collapsible\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [open, setOpen] = useState(false);\n  return (\n    <Collapsible open={open} onOpenChange={setOpen}>\n      <CollapsibleTrigger asChild>\n        <Button variant=\"ghost\" onPress={() => setOpen(!open)}>Toggle</Button>\n      </CollapsibleTrigger>\n      <CollapsibleContent>\n        <Text>Hidden content revealed on expand.</Text>\n      </CollapsibleContent>\n    </Collapsible>\n  );\n}"
+}

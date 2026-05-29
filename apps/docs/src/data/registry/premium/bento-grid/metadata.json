@@ -1,0 +1,7 @@
+{
+  "name": "Bento Grid",
+  "description": "An elegant, asymmetrical layout grid designed to highlight metrics, charts, and product features in a sleek dashboard style.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add bento-grid",
+  "usageCode": "import { BentoGrid, BentoCard } from \"@nativecn/ui/premium/magic/bento-grid\";\n\nexport default function App() {\n  return (\n    <BentoGrid cols={3}>\n      <BentoCard title=\"Performance\" description=\"Load times under 200ms\" />\n      <BentoCard title=\"Security\" description=\"Biometric vault enabled\" />\n      <BentoCard title=\"Network\" description=\"Realtime websocket links\" />\n    </BentoGrid>\n  );\n}"
+}

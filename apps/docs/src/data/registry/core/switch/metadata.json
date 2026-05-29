@@ -1,0 +1,7 @@
+{
+  "name": "Switch",
+  "description": "A smooth, animated toggle control that allows users to switch between binary states with tactile motion feedback.",
+  "category": "Core Components",
+  "installation": "npx nativecn add switch",
+  "usageCode": "import { useState } from \"react\";\nimport { Switch } from \"@nativecn/ui/components/switch\";\n\nexport default function App() {\n  const [enabled, setEnabled] = useState(false);\n  return (\n    <Switch \n      checked={enabled} \n      onCheckedChange={setEnabled} \n    />\n  );\n}"
+}

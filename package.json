@@ -3,11 +3,26 @@
   "version": "0.0.0",
   "private": true,
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "apps/*"
   ],
+  "overrides": {
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "@nativecn/docs": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0"
+    },
+    "@nativecn/ui": {
+      "react": "19.0.0",
+      "react-dom": "19.0.0"
+    }
+  },
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",
+    "registry:generate": "npm --prefix apps/docs run registry:generate",
+    "registry:watch": "npm --prefix apps/docs run registry:generate -- --watch",
     "test": "turbo run test",
     "test:coverage": "turbo run test -- --coverage",
     "lint": "biome lint .",

@@ -1,0 +1,7 @@
+{
+  "name": "Accordion",
+  "description": "A vertically stacked set of interactive headers that slide open to reveal detailed content panels with smooth transitions.",
+  "category": "Core Components",
+  "installation": "npx nativecn add accordion",
+  "usageCode": "import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from \"@nativecn/ui/components/accordion\";\n\nexport default function App() {\n  return (\n    <Accordion type=\"single\" collapsible>\n      <AccordionItem value=\"item-1\">\n        <AccordionTrigger>Is it highly customizable?</AccordionTrigger>\n        <AccordionContent>Yes! You own the component code. Modify files directly inside your project structure.</AccordionContent>\n      </AccordionItem>\n      <AccordionItem value=\"item-2\">\n        <AccordionTrigger>Are micro-animations supported?</AccordionTrigger>\n        <AccordionContent>Fully integrated with spring physics via React Native Reanimated and Moti.</AccordionContent>\n      </AccordionItem>\n    </Accordion>\n  );\n}"
+}

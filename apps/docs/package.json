@@ -1,0 +1,24 @@
+{
+  "name": "@nativecn/docs",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/generate-registry.mjs && next dev -p 3000",
+    "build": "node scripts/generate-registry.mjs && next build",
+    "registry:generate": "node scripts/generate-registry.mjs",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "15.1.6",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "lucide-react": "^0.474.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.16",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "typescript": "^5.7.3"
+  }
+}

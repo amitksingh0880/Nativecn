@@ -1,0 +1,7 @@
+{
+  "name": "Meteors",
+  "description": "An atmospheric particle effect rendering diagonal shooting stars across the screen using randomized linear gradient streaks.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add meteors",
+  "usageCode": "import { Meteors } from \"@nativecn/ui/premium/magic/meteors\";\n\nexport default function App() {\n  return (\n    <View style={{ flex: 1, backgroundColor: \"#0f0a1e\" }}>\n      <Meteors number={25} />\n      <Text style={{ color: \"white\", textAlign: \"center\" }}>Meteor shower</Text>\n    </View>\n  );\n}"
+}

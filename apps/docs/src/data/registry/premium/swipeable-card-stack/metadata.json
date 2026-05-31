@@ -1,0 +1,7 @@
+{
+  "name": "Swipeable Card Stack",
+  "description": "A Tinder-style gesture-driven card stack where users swipe through items with spring physics and directional callbacks.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add swipeable-card-stack",
+  "usageCode": "import { SwipeableCardStack } from \"@nativecn/ui/premium/mobile/swipeable-card-stack\";\n\nexport default function App() {\n  const cards = [\n    { id: \"1\", title: \"Card One\", color: \"#a855f7\" },\n    { id: \"2\", title: \"Card Two\", color: \"#3b82f6\" },\n    { id: \"3\", title: \"Card Three\", color: \"#10b981\" },\n  ];\n  return (\n    <SwipeableCardStack\n      data={cards}\n      renderCard={(item) => <Text style={{ color: \"white\" }}>{item.title}</Text>}\n      onSwipeLeft={(item) => console.log(\"Skipped:\", item.id)}\n      onSwipeRight={(item) => console.log(\"Liked:\", item.id)}\n    />\n  );\n}"
+}

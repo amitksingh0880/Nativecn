@@ -1,0 +1,7 @@
+{
+  "name": "Textarea",
+  "description": "A resizable multi-line text input with focus glow borders, character count support, and fluid auto-grow behavior.",
+  "category": "Core Components",
+  "installation": "npx nativecn add textarea",
+  "usageCode": "import { useState } from \"react\";\nimport { Textarea } from \"@nativecn/ui/components/textarea\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"\");\n  return (\n    <Textarea\n      value={value}\n      onChangeText={setValue}\n      placeholder=\"Write your bio...\"\n      label=\"Bio\"\n      maxLength={280}\n    />\n  );\n}"
+}

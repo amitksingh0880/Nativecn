@@ -1,0 +1,7 @@
+{
+  "name": "Alert",
+  "description": "A contextual feedback banner with icon support, delivering success, warning, error, and informational states in a clean inline layout.",
+  "category": "Core Components",
+  "installation": "npx nativecn add alert",
+  "usageCode": "import { Alert, AlertTitle, AlertDescription } from \"@nativecn/ui/components/alert\";\nimport { Info } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <Alert variant=\"default\" icon={Info}>\n      <AlertTitle>Heads up!</AlertTitle>\n      <AlertDescription>Your session will expire in 5 minutes.</AlertDescription>\n    </Alert>\n  );\n}"
+}

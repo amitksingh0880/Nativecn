@@ -1,0 +1,7 @@
+{
+  "name": "Radio Group",
+  "description": "An accessible single-selection control with animated circular indicator, label support, and full keyboard / haptic integration.",
+  "category": "Core Components",
+  "installation": "npx nativecn add radio-group",
+  "usageCode": "import { useState } from \"react\";\nimport { RadioGroup, RadioGroupItem } from \"@nativecn/ui/components/radio-group\";\n\nexport default function App() {\n  const [value, setValue] = useState(\"option1\");\n  return (\n    <RadioGroup value={value} onValueChange={setValue}>\n      <RadioGroupItem value=\"option1\" label=\"Option One\" />\n      <RadioGroupItem value=\"option2\" label=\"Option Two\" />\n      <RadioGroupItem value=\"option3\" label=\"Option Three\" />\n    </RadioGroup>\n  );\n}"
+}

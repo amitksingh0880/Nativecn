@@ -1,0 +1,7 @@
+{
+  "name": "Typing Indicator",
+  "description": "A three-dot AI typing animation with staggered bounce physics to signal that a response is being generated.",
+  "category": "Premium - AI",
+  "installation": "npx nativecn add typing-indicator",
+  "usageCode": "import { TypingIndicator } from \"@nativecn/ui/premium/ai/typing-indicator\";\n\nexport default function App() {\n  return (\n    <View style={{ padding: 16 }}>\n      <TypingIndicator />\n    </View>\n  );\n}"
+}

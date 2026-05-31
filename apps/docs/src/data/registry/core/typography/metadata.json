@@ -1,0 +1,7 @@
+{
+  "name": "Typography",
+  "description": "A sophisticated, type-safe font system offering structured headers, subtexts, and regular paragraphs for mobile views.",
+  "category": "Core Components",
+  "installation": "npx nativecn add typography",
+  "usageCode": "import { Text } from \"@nativecn/ui/components/typography\";\n\nexport default function App() {\n  return (\n    <View style={{ gap: 12 }}>\n      <Text variant=\"h1\">Premium Title</Text>\n      <Text variant=\"h3\">Sub-headline</Text>\n      <Text variant=\"p\">Clean body copy with perfect readability.</Text>\n      <Text variant=\"muted\">Secondary descriptive note.</Text>\n    </View>\n  );\n}"
+}

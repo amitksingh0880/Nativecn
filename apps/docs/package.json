@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3000",
-    "build": "next build",
+    "dev": "node scripts/generate-registry.mjs && next dev -p 3000",
+    "build": "node scripts/generate-registry.mjs && next build",
+    "registry:generate": "node scripts/generate-registry.mjs",
     "start": "next start",
     "lint": "next lint"
   },

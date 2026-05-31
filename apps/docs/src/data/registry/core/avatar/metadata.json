@@ -1,0 +1,7 @@
+{
+  "name": "Avatar",
+  "description": "A modern circular profile image placeholder supporting initials fallbacks and smooth load states.",
+  "category": "Core Components",
+  "installation": "npx nativecn add avatar",
+  "usageCode": "import { Avatar, AvatarImage, AvatarFallback } from \"@nativecn/ui/components/avatar\";\n\nexport default function App() {\n  return (\n    <Avatar size=\"lg\">\n      <AvatarImage src=\"https://images.unsplash.com/photo-1534528741775-53994a69daeb\" />\n      <AvatarFallback>JD</AvatarFallback>\n    </Avatar>\n  );\n}"
+}

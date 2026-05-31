@@ -1,0 +1,7 @@
+{
+  "name": "Shimmer",
+  "description": "A looping skeleton shimmer effect powered by a sweeping LinearGradient, giving loading placeholders a premium polished feel.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add shimmer",
+  "usageCode": "import { Shimmer } from \"@nativecn/ui/premium/magic/shimmer\";\n\nexport default function App() {\n  return (\n    <View style={{ gap: 10, padding: 16 }}>\n      <Shimmer width=\"100%\" height={18} borderRadius={6} />\n      <Shimmer width=\"70%\" height={18} borderRadius={6} />\n      <Shimmer width={80} height={80} borderRadius={40} />\n    </View>\n  );\n}"
+}

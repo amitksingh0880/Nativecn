@@ -1,0 +1,7 @@
+{
+  "name": "Dropdown Menu",
+  "description": "A floating contextual menu that appears below any trigger with smooth fade-in, nested items, separators, and icon support.",
+  "category": "Core Components",
+  "installation": "npx nativecn add dropdown-menu",
+  "usageCode": "import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from \"@nativecn/ui/components/dropdown-menu\";\nimport { Button } from \"@nativecn/ui/components/button\";\nimport { Settings, LogOut, User } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">Open Menu</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuItem icon={User}>Profile</DropdownMenuItem>\n        <DropdownMenuItem icon={Settings}>Settings</DropdownMenuItem>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem icon={LogOut} destructive>Sign Out</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Card",
+  "description": "A beautiful modular card container featuring defined borders, description text, content areas, and clean footers.",
+  "category": "Core Components",
+  "installation": "npx nativecn add card",
+  "usageCode": "import { Card, CardHeader, CardTitle, CardDescription, CardContent, CardFooter } from \"@nativecn/ui/components/card\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  return (\n    <Card>\n      <CardHeader>\n        <CardTitle>Vault Security</CardTitle>\n        <CardDescription>Configure local lock options</CardDescription>\n      </CardHeader>\n      <CardContent>\n        <Text>Enable face recognition for higher lock safety.</Text>\n      </CardContent>\n      <CardFooter>\n        <Button size=\"sm\">Enable</Button>\n      </CardFooter>\n    </Card>\n  );\n}"
+}

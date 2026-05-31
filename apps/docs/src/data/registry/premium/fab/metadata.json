@@ -1,0 +1,7 @@
+{
+  "name": "FAB",
+  "description": "A floating action button with bouncy spring press animation, optional expanded label, and flexible corner positioning.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add fab",
+  "usageCode": "import { Fab } from \"@nativecn/ui/premium/mobile/fab\";\nimport { Plus } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <View style={{ flex: 1 }}>\n      <Fab\n        icon={<Plus size={24} color=\"white\" />}\n        label=\"New Task\"\n        isExpanded\n        position=\"bottom-right\"\n        onPress={() => console.log(\"FAB pressed\")}\n      />\n    </View>\n  );\n}"
+}

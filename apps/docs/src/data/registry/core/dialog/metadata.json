@@ -1,0 +1,7 @@
+{
+  "name": "Dialog",
+  "description": "A highly responsive modal overlay dialog that slides smoothly from the bottom with haptic integration.",
+  "category": "Core Components",
+  "installation": "npx nativecn add dialog",
+  "usageCode": "import { useState } from \"react\";\nimport { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription, DialogFooter } from \"@nativecn/ui/components/dialog\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [open, setOpen] = useState(false);\n  return (\n    <View>\n      <Button onPress={() => setOpen(true)}>Open Dialog</Button>\n      <Dialog open={open} onOpenChange={setOpen}>\n        <DialogContent>\n          <DialogHeader>\n            <DialogTitle>Confirm Sign Out</DialogTitle>\n            <DialogDescription>Are you sure you want to log out of your vault?</DialogDescription>\n          </DialogHeader>\n          <DialogFooter>\n            <Button variant=\"ghost\" onPress={() => setOpen(false)}>Cancel</Button>\n            <Button variant=\"destructive\" onPress={() => setOpen(false)}>Sign Out</Button>\n          </DialogFooter>\n        </DialogContent>\n      </Dialog>\n    </View>\n  );\n}"
+}

@@ -1,0 +1,7 @@
+{
+  "name": "Border Beam",
+  "description": "A state-of-the-art glowing laser beam that slides seamlessly around container borders using clean SVG gradients.",
+  "category": "Premium - Magic",
+  "installation": "npx nativecn add border-beam",
+  "usageCode": "import { BorderBeam } from \"@nativecn/ui/premium/magic/border-beam\";\n\nexport default function App() {\n  return (\n    <View style={{ width: 200, height: 200, position: \"relative\" }}>\n      <BorderBeam size={100} duration={4} borderWidth={2} />\n    </View>\n  );\n}"
+}

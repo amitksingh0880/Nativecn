@@ -1,0 +1,7 @@
+{
+  "name": "Glass Header",
+  "description": "A scroll-reactive frosted glass app header with dynamic blur intensity and opacity tied to scroll position.",
+  "category": "Premium - Glass",
+  "installation": "npx nativecn add glass-header",
+  "usageCode": "import { GlassHeader } from \"@nativecn/ui/premium/glass/glass-header\";\n\nexport default function App() {\n  return (\n    <View style={{ flex: 1 }}>\n      <GlassHeader title=\"Dashboard\" showBackButton />\n    </View>\n  );\n}"
+}

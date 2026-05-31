@@ -1,0 +1,7 @@
+{
+  "name": "Floating Dock",
+  "description": "A macOS-inspired magnifying dock bar where icons scale up on hover/focus with spring-animated proximity effects.",
+  "category": "Premium - Layout",
+  "installation": "npx nativecn add floating-dock",
+  "usageCode": "import { FloatingDock } from \"@nativecn/ui/premium/layout/floating-dock\";\nimport { Home, Settings, Bell, User } from \"lucide-react-native\";\n\nexport default function App() {\n  const items = [\n    { icon: <Home size={22} />, label: \"Home\", onPress: () => {} },\n    { icon: <Bell size={22} />, label: \"Alerts\", onPress: () => {} },\n    { icon: <Settings size={22} />, label: \"Settings\", onPress: () => {} },\n    { icon: <User size={22} />, label: \"Profile\", onPress: () => {} },\n  ];\n  return <FloatingDock items={items} />;\n}"
+}

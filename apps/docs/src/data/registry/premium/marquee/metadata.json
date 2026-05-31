@@ -1,0 +1,7 @@
+{
+  "name": "Marquee",
+  "description": "An infinitely looping horizontal scrolling ticker for announcements, tags, and logos with configurable speed and direction.",
+  "category": "Premium - Motion",
+  "installation": "npx nativecn add marquee",
+  "usageCode": "import { Marquee } from \"@nativecn/ui/premium/motion/marquee\";\n\nexport default function App() {\n  const items = [\"React Native\", \"Expo\", \"Reanimated\", \"NativeCN\", \"TypeScript\"];\n  return (\n    <Marquee speed={50}>\n      {items.map((item, i) => (\n        <Text key={i} style={{ marginRight: 32, color: \"#a855f7\" }}>{item}</Text>\n      ))}\n    </Marquee>\n  );\n}"
+}

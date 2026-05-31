@@ -1,0 +1,7 @@
+{
+  "name": "Separator",
+  "description": "A thin, semantic divider line for separating content sections horizontally or vertically with precise spacing control.",
+  "category": "Core Components",
+  "installation": "npx nativecn add separator",
+  "usageCode": "import { Separator } from \"@nativecn/ui/components/separator\";\n\nexport default function App() {\n  return (\n    <View style={{ gap: 12 }}>\n      <Text variant=\"h4\">Section One</Text>\n      <Separator />\n      <Text variant=\"p\">Section two content goes here.</Text>\n    </View>\n  );\n}"
+}

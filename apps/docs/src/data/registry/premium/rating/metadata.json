@@ -1,0 +1,7 @@
+{
+  "name": "Rating",
+  "description": "An interactive star rating input with half-star precision, animated fill transitions, and customizable colors and sizes.",
+  "category": "Premium - Inputs",
+  "installation": "npx nativecn add rating",
+  "usageCode": "import { useState } from \"react\";\nimport { Rating } from \"@nativecn/ui/premium/inputs/rating\";\n\nexport default function App() {\n  const [rating, setRating] = useState(4);\n  return (\n    <Rating\n      value={rating}\n      onChange={setRating}\n      maxStars={5}\n      size={32}\n    />\n  );\n}"
+}

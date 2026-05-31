@@ -1,0 +1,7 @@
+{
+  "name": "Checkbox",
+  "description": "A pristine interactive check box with active spring scale feedback and customizable outline states.",
+  "category": "Core Components",
+  "installation": "npx nativecn add checkbox",
+  "usageCode": "import { useState } from \"react\";\nimport { Checkbox } from \"@nativecn/ui/components/checkbox\";\n\nexport default function App() {\n  const [checked, setChecked] = useState(false);\n  return (\n    <Checkbox \n      checked={checked} \n      onCheckedChange={setChecked} \n      label=\"Accept Terms & Conditions\"\n    />\n  );\n}"
+}

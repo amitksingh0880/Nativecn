@@ -1,0 +1,7 @@
+{
+  "name": "Bottom Tab Bar",
+  "description": "A native mobile navigation bar with spring-animated active indicator, haptic tab-press feedback, and safe-area padding.",
+  "category": "Premium - Mobile",
+  "installation": "npx nativecn add bottom-tab-bar",
+  "usageCode": "import { useState } from \"react\";\nimport { BottomTabBar } from \"@nativecn/ui/premium/mobile/bottom-tab-bar\";\nimport { Home, Search, Bell, User } from \"lucide-react-native\";\n\nexport default function App() {\n  const [active, setActive] = useState(\"home\");\n  const items = [\n    { key: \"home\", label: \"Home\", icon: <Home size={20} /> },\n    { key: \"search\", label: \"Search\", icon: <Search size={20} /> },\n    { key: \"alerts\", label: \"Alerts\", icon: <Bell size={20} /> },\n    { key: \"profile\", label: \"Profile\", icon: <User size={20} /> },\n  ];\n  return <BottomTabBar items={items} activeKey={active} onTabPress={setActive} />;\n}"
+}

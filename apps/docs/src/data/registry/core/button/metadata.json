@@ -1,0 +1,7 @@
+{
+  "name": "Button",
+  "description": "A premium, responsive button component with multiple style variants, haptic feedback integration, and subtle press micro-animations.",
+  "category": "Core Components",
+  "installation": "npx nativecn add button",
+  "usageCode": "import { Button } from \"@nativecn/ui/components/button\";\nimport { LogIn } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <Button \n      variant=\"default\" \n      size=\"lg\" \n      onPress={() => console.log(\"Pressed\")}\n    >\n      <Button.Icon icon={LogIn} />\n      <Button.Text>Get Started</Button.Text>\n    </Button>\n  );\n}"
+}

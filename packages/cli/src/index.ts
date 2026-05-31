@@ -6,8 +6,8 @@ import { add } from './commands/add';
 const program = new Command();
 
 program
-  .name('nativecn')
-  .description('CLI to add Nativecn UI components to your React Native / Expo project')
+  .name('cnnative')
+  .description('CLI to add cnnative-ui components to your React Native / Expo project')
   .version('1.0.0');
 
 program

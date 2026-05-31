@@ -1,5 +1,5 @@
 {
-  "name": "@nativecn/ui",
+  "name": "cnnative-ui",
   "version": "1.0.0",
   "description": "A shadcn/ui + Radix-inspired React Native component library that surpasses both",
   "keywords": [

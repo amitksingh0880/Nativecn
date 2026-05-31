@@ -39,9 +39,9 @@ export async function add(components: string[], options: any) {
   const cwd = process.cwd();
 
   // Read config
-  const configPath = path.join(cwd, 'nativecn.json');
+  const configPath = path.join(cwd, 'cnnative.json');
   if (!await fs.pathExists(configPath)) {
-    console.log(chalk.red('❌ No nativecn.json found. Please run `npx nativecn init` first.'));
+    console.log(chalk.red('❌ No cnnative.json found. Please run `npx cnnative init` first.'));
     process.exit(1);
   }
 

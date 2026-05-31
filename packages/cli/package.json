@@ -1,10 +1,10 @@
 {
-  "name": "@nativecn/cli",
+  "name": "cnnative",
   "version": "1.0.0",
   "description": "CLI for Nativecn UI - Premium Shadcn for React Native",
   "main": "dist/index.js",
   "bin": {
-    "nativecn": "dist/index.js"
+    "cnnative": "dist/index.js"
   },
   "scripts": {
     "build": "tsc",

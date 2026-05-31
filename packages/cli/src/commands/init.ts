@@ -54,7 +54,7 @@ function getSourceLibPath(): string {
 }
 
 export async function init() {
-  console.log(chalk.blue('\n🚀 Initializing Nativecn UI in your project...\n'));
+  console.log(chalk.blue('\n🚀 Initializing cnnative-ui in your project...\n'));
 
   const cwd = process.cwd();
   const pkgPath = path.join(cwd, 'package.json');
@@ -117,10 +117,10 @@ export async function init() {
     process.exit(0);
   }
 
-  const spinner = ora('Writing nativecn.json configuration...').start();
+  const spinner = ora('Writing cnnative.json configuration...').start();
 
   const config = {
-    $schema: "https://nativecn.com/schema.json",
+    $schema: "https://cnnative.com/schema.json",
     style: "default",
     typescript: response.typescript,
     tailwind: {
@@ -135,8 +135,8 @@ export async function init() {
     }
   };
 
-  await fs.writeJSON(path.join(cwd, 'nativecn.json'), config, { spaces: 2 });
-  spinner.succeed('Created nativecn.json');
+  await fs.writeJSON(path.join(cwd, 'cnnative.json'), config, { spaces: 2 });
+  spinner.succeed('Created cnnative.json');
 
   // Copying Core Library Files
   const libSpinner = ora('Writing core utility files to ' + response.libDir + '...').start();
@@ -227,6 +227,6 @@ export async function init() {
   }
 
   console.log(chalk.green('\n✅ Initialization complete.'));
-  console.log(chalk.gray('You can now run `npx nativecn add button` to add your first component.\n'));
+  console.log(chalk.gray('You can now run `npx cnnative add button` to add your first component.\n'));
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "cnnative",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for Nativecn UI - Premium Shadcn for React Native",
   "main": "dist/index.js",
   "bin": {

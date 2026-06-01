@@ -1,3 +1,5 @@
+"use client";
+
 // ==========================================
 // AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY
 // To modify component entries, edit their metadata.json or mockup.tsx
@@ -72,6 +74,7 @@ import InteractiveSwipeRowMockup from "./registry/premium/swipe-row/mockup";
 import InteractiveSwipeableCardStackMockup from "./registry/premium/swipeable-card-stack/mockup";
 import InteractiveTypingIndicatorMockup from "./registry/premium/typing-indicator/mockup";
 import InteractiveTypingTextMockup from "./registry/premium/typing-text/mockup";
+
 
 export interface DocEntry {
   name: string;

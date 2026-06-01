@@ -70,7 +70,9 @@ async function generate() {
   }
 
   // Build TSX output
-  let fileContent = `// ==========================================
+  let fileContent = `"use client";
+
+// ==========================================
 // AUTO-GENERATED FILE - DO NOT EDIT DIRECTLY
 // To modify component entries, edit their metadata.json or mockup.tsx
 // under apps/docs/src/data/registry/ and run:
@@ -79,6 +81,7 @@ async function generate() {
 
 import React from "react";
 ${imports.join('\n')}
+
 
 export interface DocEntry {
   name: string;

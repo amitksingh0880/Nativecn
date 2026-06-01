@@ -1,5 +1,6 @@
 import { MetadataRoute } from "next";
-import { docsRegistry } from "../data/docs-registry";
+import fs from "fs";
+import path from "path";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://nativecn-docs.vercel.app";
@@ -26,19 +27,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 
-  // 2. Dynamic component documentation pages
+  // 2. Dynamic component documentation pages scanned via File System
   const registryPages: MetadataRoute.Sitemap = [];
+  const categories = ["core", "premium"];
 
-  for (const category of Object.keys(docsRegistry)) {
-    const slugMap = docsRegistry[category];
-    for (const slug of Object.keys(slugMap)) {
-      registryPages.push({
-        url: `${baseUrl}/docs/${category}/${slug}`,
-        lastModified: new Date(),
-        changeFrequency: "weekly" as const,
-        priority: 0.8,
-      });
+  try {
+    const cwd = process.cwd();
+    // Path inside workspace: apps/docs/src/data/registry/
+    const registryDir = path.join(cwd, "src", "data", "registry");
+    
+    for (const category of categories) {
+      const categoryPath = path.join(registryDir, category);
+      if (fs.existsSync(categoryPath)) {
+        const slugs = fs.readdirSync(categoryPath);
+        for (const slug of slugs) {
+          const slugPath = path.join(categoryPath, slug);
+          if (fs.statSync(slugPath).isDirectory()) {
+            registryPages.push({
+              url: `${baseUrl}/docs/${category}/${slug}`,
+              lastModified: new Date(),
+              changeFrequency: "weekly" as const,
+              priority: 0.8,
+            });
+          }
+        }
+      }
     }
+  } catch (error) {
+    console.error("Error generating dynamic sitemap routes:", error);
   }
 
   return [...staticPages, ...registryPages];

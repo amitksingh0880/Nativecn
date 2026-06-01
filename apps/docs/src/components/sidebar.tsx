@@ -24,6 +24,19 @@ export default function Sidebar() {
         </div>
       </div>
 
+      {/* Composite Simulations Group */}
+      <div className={styles.sidebarGroup}>
+        <div className={styles.sidebarGroupTitle}>Composite Showcase</div>
+        <div className={styles.sidebarLinks}>
+          <Link
+            href="/docs/simulations"
+            className={`${styles.sidebarLink} ${pathname === "/docs/simulations" ? styles.sidebarLinkActive : ""}`}
+          >
+            Multi-Component Sandbox
+          </Link>
+        </div>
+      </div>
+
       {/* Core Components Group */}
       <div className={styles.sidebarGroup}>
         <div className={styles.sidebarGroupTitle}>Core Components</div>

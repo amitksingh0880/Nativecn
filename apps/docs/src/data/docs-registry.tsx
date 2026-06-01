@@ -19,6 +19,7 @@ import InteractiveCheckboxMockup from "./registry/core/checkbox/mockup";
 import InteractiveCollapsibleMockup from "./registry/core/collapsible/mockup";
 import InteractiveDialogMockup from "./registry/core/dialog/mockup";
 import InteractiveDropdownMenuMockup from "./registry/core/dropdown-menu/mockup";
+import InteractiveFormMockup from "./registry/core/form/mockup";
 import InteractiveInputMockup from "./registry/core/input/mockup";
 import InteractivePaginationMockup from "./registry/core/pagination/mockup";
 import InteractiveProgressMockup from "./registry/core/progress/mockup";
@@ -186,6 +187,14 @@ export const docsRegistry: Record<string, Record<string, DocEntry>> = {
       installation: "npx nativecn add dropdown-menu",
       usageCode: "import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSeparator } from \"@nativecn/ui/components/dropdown-menu\";\nimport { Button } from \"@nativecn/ui/components/button\";\nimport { Settings, LogOut, User } from \"lucide-react-native\";\n\nexport default function App() {\n  return (\n    <DropdownMenu>\n      <DropdownMenuTrigger asChild>\n        <Button variant=\"outline\">Open Menu</Button>\n      </DropdownMenuTrigger>\n      <DropdownMenuContent>\n        <DropdownMenuItem icon={User}>Profile</DropdownMenuItem>\n        <DropdownMenuItem icon={Settings}>Settings</DropdownMenuItem>\n        <DropdownMenuSeparator />\n        <DropdownMenuItem icon={LogOut} destructive>Sign Out</DropdownMenuItem>\n      </DropdownMenuContent>\n    </DropdownMenu>\n  );\n}",
       componentMockup: () => React.createElement(InteractiveDropdownMenuMockup)
+    },
+    "form": {
+      name: "Form",
+      description: "An elegant, highly accessible, and flexible form building system using custom inputs, validation states, and helper messages.",
+      category: "Core Components",
+      installation: "npx nativecn add form",
+      usageCode: "import React from \"react\";\nimport { View } from \"react-native\";\nimport { Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from \"@nativecn/ui/components/form\";\nimport { Input } from \"@nativecn/ui/components/input\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [email, setEmail] = React.useState(\"\");\n  const [error, setError] = React.useState(\"\");\n\n  const handleSubmit = () => {\n    if (!email.includes(\"@\")) {\n      setError(\"Invalid email address.\");\n    } else {\n      setError(\"\");\n      console.log(\"Submitted email:\", email);\n    }\n  };\n\n  return (\n    <Form>\n      <FormItem>\n        <FormLabel error={!!error}>Email Address</FormLabel>\n        <FormControl>\n          <Input \n            value={email}\n            onChangeText={setEmail}\n            placeholder=\"name@example.com\"\n            error={!!error}\n          />\n        </FormControl>\n        <FormDescription>\n          We will never share your email address with anyone else.\n        </FormDescription>\n        <FormMessage>{error}</FormMessage>\n      </FormItem>\n      <Button onPress={handleSubmit}>\n        <Button.Text>Submit</Button.Text>\n      </Button>\n    </Form>\n  );\n}",
+      componentMockup: () => React.createElement(InteractiveFormMockup)
     },
     "input": {
       name: "Input",

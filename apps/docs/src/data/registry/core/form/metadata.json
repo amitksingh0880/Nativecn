@@ -1,0 +1,7 @@
+{
+  "name": "Form",
+  "description": "An elegant, highly accessible, and flexible form building system using custom inputs, validation states, and helper messages.",
+  "category": "Core Components",
+  "installation": "npx nativecn add form",
+  "usageCode": "import React from \"react\";\nimport { View } from \"react-native\";\nimport { Form, FormItem, FormLabel, FormControl, FormDescription, FormMessage } from \"@nativecn/ui/components/form\";\nimport { Input } from \"@nativecn/ui/components/input\";\nimport { Button } from \"@nativecn/ui/components/button\";\n\nexport default function App() {\n  const [email, setEmail] = React.useState(\"\");\n  const [error, setError] = React.useState(\"\");\n\n  const handleSubmit = () => {\n    if (!email.includes(\"@\")) {\n      setError(\"Invalid email address.\");\n    } else {\n      setError(\"\");\n      console.log(\"Submitted email:\", email);\n    }\n  };\n\n  return (\n    <Form>\n      <FormItem>\n        <FormLabel error={!!error}>Email Address</FormLabel>\n        <FormControl>\n          <Input \n            value={email}\n            onChangeText={setEmail}\n            placeholder=\"name@example.com\"\n            error={!!error}\n          />\n        </FormControl>\n        <FormDescription>\n          We will never share your email address with anyone else.\n        </FormDescription>\n        <FormMessage>{error}</FormMessage>\n      </FormItem>\n      <Button onPress={handleSubmit}>\n        <Button.Text>Submit</Button.Text>\n      </Button>\n    </Form>\n  );\n}"
+}

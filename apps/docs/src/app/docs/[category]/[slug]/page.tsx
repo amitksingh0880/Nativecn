@@ -1,12 +1,8 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import { notFound } from "next/navigation";
 import { getDocEntry } from "../../../../data/docs-registry";
-import styles from "../../../../styles/docs.module.css";
-import compStyles from "../../../../styles/components.module.css";
-import CodeBlock from "../../../../components/code-block";
-import Simulator from "../../../../components/simulator";
+import ComponentDocClient from "./ComponentDocClient";
+import { Metadata } from "next";
 
 interface PageProps {
   params: Promise<{
@@ -15,63 +11,42 @@ interface PageProps {
   }>;
 }
 
-export default function ComponentDocPage({ params }: PageProps) {
-  const { category, slug } = React.use(params);
+export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
+  const { category, slug } = await params;
   const entry = getDocEntry(category, slug);
-  const [activeTab, setActiveTab] = useState<"preview" | "code">("preview");
+
+  if (!entry) {
+    return {
+      title: "Component Not Found - Nativecn",
+    };
+  }
+
+  return {
+    title: `${entry.name} React Native Component - Nativecn`,
+    description: `${entry.description} Learn how to install and use the Nativecn ${entry.name} component in your Expo and React Native projects.`,
+    keywords: [entry.name.toLowerCase(), "react native", "expo", category, "ui component", "tailwind", "moti"],
+    openGraph: {
+      title: `${entry.name} React Native Component - Nativecn`,
+      description: entry.description,
+      type: "website",
+      url: `https://nativecn-docs.vercel.app/docs/${category}/${slug}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${entry.name} React Native Component - Nativecn`,
+      description: entry.description,
+    },
+  };
+}
+
+export default async function ComponentDocPage({ params }: PageProps) {
+  const { category, slug } = await params;
+  const entry = getDocEntry(category, slug);
 
   if (!entry) {
     notFound();
   }
 
-  return (
-    <div style={{ maxWidth: "1000px" }}>
-      {/* Header */}
-      <header className={styles.docHeader}>
-        <h1 className={styles.title}>{entry.name}</h1>
-        <p className={styles.description}>{entry.description}</p>
-      </header>
-
-      {/* Interactive Showcase Tabs */}
-      <div className={compStyles.tabsContainer}>
-        <div className={compStyles.tabList}>
-          <button
-            onClick={() => setActiveTab("preview")}
-            className={`${compStyles.tabTrigger} ${activeTab === "preview" ? compStyles.tabTriggerActive : ""}`}
-          >
-            Preview
-          </button>
-          <button
-            onClick={() => setActiveTab("code")}
-            className={`${compStyles.tabTrigger} ${activeTab === "code" ? compStyles.tabTriggerActive : ""}`}
-          >
-            Code
-          </button>
-        </div>
-
-        <div className={compStyles.tabContent}>
-          {activeTab === "preview" ? (
-            <div className={compStyles.previewArea}>
-              <Simulator>
-                {entry.componentMockup()}
-              </Simulator>
-            </div>
-          ) : (
-            <div className={compStyles.codeArea}>
-              <CodeBlock code={entry.usageCode} filename={`${entry.name}.tsx`} />
-            </div>
-          )}
-        </div>
-      </div>
-
-      {/* Installation guide */}
-      <section className={styles.section}>
-        <h2 className={styles.sectionTitle}>Installation</h2>
-        <p className={styles.paragraph}>
-          Add the component and all associated sub-modules to your Expo project automatically using our CLI command:
-        </p>
-        <CodeBlock code={entry.installation} filename="Terminal" />
-      </section>
-    </div>
-  );
+  return <ComponentDocClient entry={entry} />;
 }
+
